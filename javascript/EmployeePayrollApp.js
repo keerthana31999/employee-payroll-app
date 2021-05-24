@@ -26,17 +26,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     output.textContent = salary.value;
     salary.addEventListener('input', function() {
         output.textContent = salary.value;
-   });
+    });
+
 });
 const save = () => {
+    console.log("outside save function");
     try {
+        console.log("save function");
         let employeePayrollData = createEmployeePayroll();
     } catch (e) {
         return;
    }
 }
 //Use Case 13
+
 const createEmployeePayroll = () => {
+    
     let employeePayrollData = new EmployeePayrollData();
     try {
         employeePayrollData.name = getInputValueById('#name');
@@ -45,6 +50,7 @@ const createEmployeePayroll = () => {
         throw e;
     }
             employeePayrollData.profilePic = getSelectedValues('[name=profile]').pop();
+    
             employeePayrollData.gender = getSelectedValues('[name=gender]').pop();
             employeePayrollData.department = getSelectedValues('[name=department]');
             employeePayrollData.salary = getInputValueById('#salary');
@@ -57,6 +63,7 @@ const createEmployeePayroll = () => {
             }
 
             const getSelectedValues = (propertyValue) => {
+                console.log(propertyValue);
             let allItems = document.querySelectorAll(propertyValue);
             let selItems = [];
             allItems.forEach(item => {
