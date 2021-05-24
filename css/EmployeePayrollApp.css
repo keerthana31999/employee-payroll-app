@@ -99,6 +99,7 @@ label {
     border-radius: 4px;
     resize: vertical;
 }
+
 /* uc3 */
 
 .profile-radio-content 
@@ -121,6 +122,7 @@ label {
     border-radius: 50%;
     margin-left: 12px;
 }
+
 /* UC5 */
 select {
     padding: 12px;
@@ -132,7 +134,8 @@ select {
     color: #42515f;
     background-color: transparent;
   }
-   /* UC6 */
+
+  /* UC6 */
 .buttonParent {
     display: flex;
     margin-bottom: 10px;
@@ -167,7 +170,8 @@ select {
     text-align: center;
   }
   
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 960px) 
+  {
     .cancelButton {
       margin-left: 0px;
     }
@@ -177,7 +181,8 @@ select {
     }
   }
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px)
+   {
     .form {
       margin-top: 10px;
     }
@@ -206,8 +211,9 @@ select {
       align-items: flex-start;
     }
   }
-/* UC7 */
-@media only screen and (max-width: 960px) {
+
+  /* UC7 */
+  @media only screen and (max-width: 960px) {
     .row-content {
         display: block;
         flex-direction: row;
@@ -277,6 +283,11 @@ select {
       }
   }
 
-
-
+  error-output
+  {
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+  }
 
