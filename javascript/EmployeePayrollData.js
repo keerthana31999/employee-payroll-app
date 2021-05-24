@@ -1,19 +1,13 @@
 class EmployeePayrollData 
 {
-    constructor(...params) 
-    {
-      this.id = params[0];
-      this.name = params[1];
-      this.salary = params[2];
-      this.gender = params[3];
-      this.date = params[4];
-    }
- //getter and setter method
-get id()
+
+//getter and setter method
+
+get id() 
 {
     return this._id;
 }
-set id(id)
+  set id(id) 
 {
     this._id = id;
 }
@@ -23,6 +17,7 @@ get name()
       return this._name;
 }
 set name(name)
+
 {
       let nameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$");
        
@@ -42,7 +37,7 @@ get geneder()
 {
   return this._gender;
 }
-set gender()
+set gender(gender)
 {
   this._gender = gender;
 }
@@ -62,38 +57,34 @@ set salary(salary)
 {
   this._salary = salary;
 }
-
-get note()
+get note() 
 {
-  return this._note;
+    return this._note;
 }
-set note(note)
+set note(note) 
 {
-  this._note = note;
-}
-
-get startDate() 
-{
-  return this._startDate;
+    this._note = note;
 }
 
-set startDate(startDate) 
+  get startDate() 
+{
+    return this._startDate;
+}
+
+  set startDate(startDate) 
 {
     this._startDate = startDate;
 }
 
- //method
-toString()
+
+   //method
+  toString()
   {
-    const options = { year: 'numeric', month: 'short', day: 'numeric' };
-    //if start date is not in the given datatype it will pass the value undefined to empdate
-    
-    const empDate = !this._startDate ? "undefined" : this._startDate.toLocaleDateString("en-US", options);
-    //here in return for start date we are passing empDate as value                
-    return "id=" + this._id + ", name=" + this._name + " gender= " +this._gender+ " profilePic= "+this.profilePic + " department= "+this._department + " salary= "+ this._salary+ " Note= "+this._note +  " startDate =" + empDate;
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        //if start date is not in the given datatype it will pass the value undefined to empdate
+        
+        const empDate = !this._startDate ? "undefined" : this._startDate;
+        //here in return for start date we are passing empDate as value                
+        return "id=" + this._id + ", name=" + this._name + " gender= " +this._gender+ " profilePic= "+this.profilePic + " department= "+this._department + " salary= "+ this._salary+ " Note= "+this._note +  " startDate =" + empDate;
+  }
 }
-}
-
-  
-
-
