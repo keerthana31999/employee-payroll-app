@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/keerthana31999/employee-payroll-app/issues"
   },
-  "homepage": "https://github.com/keerthana31999/employee-payroll-app#readme"
+  "homepage": "https://github.com/keerthana31999/employee-payroll-app#readme",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
 }
