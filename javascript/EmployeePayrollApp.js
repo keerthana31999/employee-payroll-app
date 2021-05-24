@@ -29,28 +29,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 });
 const save = () => {
-    console.log("outside save function");
     try {
         console.log("save function");
         let employeePayrollData = createEmployeePayroll();
+        createAndUpdateStorage(employeePayrollData);
+       // console.log("Welcome to",employeePayrollData);
+
     } catch (e) {
         return;
    }
 }
 function createAndUpdateStorage(employeePayrollData)
 {
-    let EmployeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
-        if(EmployeePayrollList != undefined)
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+        if(employeePayrollList != undefined)
             {
-                EmployeePayrollList.push(employeePayrollData);
+                employeePayrollList.push(employeePayrollData);
             } 
         else 
             {
-                EmployeePayrollList = [employeePayrolData]
-                
+                employeePayrollList = [employeePayrollData]
             }
-        alert(EmployeePayrollList.toString());
-        localStorage.setItem("EmployeePayrollList", JSON.stringify(EmployeePayrollList));
+            localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
+            alert(employeePayrollList.toString());
 }
 //Use Case 13
 
@@ -67,7 +68,6 @@ const createEmployeePayroll = () => {
         throw e;
     }
         employeePayrollData.profilePic = getSelectedValues('[name=profile]').pop();
-    
         employeePayrollData.gender = getSelectedValues('[name=gender]').pop();
         employeePayrollData.department = getSelectedValues('[name=department]');
         employeePayrollData.salary = getInputValueById('#salary');
@@ -125,3 +125,6 @@ const setValue = (id, value) => {
     const element = document.querySelector(id);
     element.value = value;
 }
+
+
+
